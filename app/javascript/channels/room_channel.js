@@ -3,7 +3,6 @@ import consumer from './consumer';
 consumer.subscriptions.create('RoomChannel', {
   connected() {
     // Called when the subscription is ready for use on the server
-    this.speak('Hi there ndoda');
 
     let roomSpeaker = document.querySelector('[data-behaviour~=room_speaker]');
     if (roomSpeaker)
