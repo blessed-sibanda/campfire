@@ -20,7 +20,9 @@ consumer.subscriptions.create('RoomChannel', {
   },
 
   received(data) {
-    alert(data['message']);
+    var div = document.createElement('div');
+    div.innerHTML += data;
+    document.getElementById('messages').appendChild(div);
     // Called when there's incoming data on the websocket for this channel
   },
 
